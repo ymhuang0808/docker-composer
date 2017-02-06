@@ -1,5 +1,5 @@
 # Composer Docker Container
-FROM composer/composer:base-alpine
+FROM ymhuang0808/docker-composer:base-alpine
 MAINTAINER Rob Loach <robloach@gmail.com>
 
 ENV COMPOSER_VERSION 1.2.0
