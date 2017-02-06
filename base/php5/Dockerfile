@@ -40,10 +40,10 @@ RUN echo "date.timezone=${PHP_TIMEZONE:-UTC}" > $PHP_INI_DIR/conf.d/date_timezon
 RUN echo "always_populate_raw_post_data=-1" > $PHP_INI_DIR/conf.d/always_populate_raw_post_data.ini
 
 # Register the COMPOSER_HOME environment variable
-ENV COMPOSER_HOME /composer
+ENV COMPOSER_HOME /.composer
 
 # Add global binary directory to PATH and make sure to re-export it
-ENV PATH /composer/vendor/bin:$PATH
+ENV PATH /.composer/vendor/bin:$PATH
 
 # Allow Composer to be run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
