@@ -40,10 +40,10 @@ RUN echo "memory_limit=-1" > $PHP_INI_DIR/conf.d/memory-limit.ini
 RUN echo "date.timezone=${PHP_TIMEZONE:-UTC}" > $PHP_INI_DIR/conf.d/date_timezone.ini
 
 # Register the COMPOSER_HOME environment variable
-ENV COMPOSER_HOME /.composer
+ENV COMPOSER_HOME /root/.composer
 
 # Add global binary directory to PATH and make sure to re-export it
-ENV PATH /.composer/vendor/bin:$PATH
+ENV PATH /root/.composer/vendor/bin:$PATH
 
 # Allow Composer to be run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
